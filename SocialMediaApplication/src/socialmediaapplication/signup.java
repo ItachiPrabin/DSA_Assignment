@@ -99,7 +99,7 @@ public class signup extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Choose your poison here");
+        jLabel4.setText("Select your interest here!!");
         jPanel2.add(jLabel4);
 
         gaming.setText("Gaming");

@@ -65,6 +65,7 @@ public class dashboard extends javax.swing.JFrame {
         recommend = new javax.swing.JTable();
         PostCategory = new javax.swing.JComboBox<>();
         jButton4 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -110,9 +111,9 @@ public class dashboard extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 850, 70));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setText("Hello, you are welcome!!");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setText("Choose your category");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 80, 130, 40));
 
         jButton3.setText("View Post");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +139,7 @@ public class dashboard extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 490, 510, 330));
 
         PostCategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gaming", "Music", "Events", "Hobbies", "Art", "Anime", " ", " " }));
-        getContentPane().add(PostCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 100, -1, -1));
+        getContentPane().add(PostCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, -1, -1));
 
         jButton4.setText("Log Out");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -147,6 +148,11 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 0, 110, 30));
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setText("Hello, you are welcome!!");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -357,6 +363,7 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPanel peoplePanel;
