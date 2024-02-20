@@ -1,6 +1,6 @@
-package Question_5_a; // Declaring the package for this class
+package Question_5_a;
 
-import java.util.Arrays; // Importing the Arrays utility class
+import java.util.Arrays;
 
 // Class representing the Ant Colony Optimization algorithm for solving the Traveling Salesman Problem
 class AntColony {
@@ -157,19 +157,19 @@ public class AntColonyTSPSolverApp {
     public static void main(String[] args) {
         // Defining distance matrix between cities
         int[][] distances = {
-                { 0, 10, 15, 20 },
+                { 0, 5, 10, 15 },
                 { 10, 0, 35, 25 },
-                { 15, 35, 0, 30 },
-                { 20, 25, 30, 0 }
+                { 10, 30, 0, 26 },
+                { 30, 35, 40, 0 }
         };
-        int numAnts = 5; // Number of ants in the colony
+        int numAnts = 6; // Number of ants in the colony
         double evaporationRate = 0.5; // Evaporation rate of pheromones
         double alpha = 1.0; // Alpha parameter controlling the influence of pheromones
         double beta = 2.0; // Beta parameter controlling the influence of distances
 
         // Creating an instance of AntColony and solving the TSP problem
         AntColony solver = new AntColony(distances, numAnts, evaporationRate, alpha, beta);
-        solver.solve(1000); // Solving TSP with 1000 iterations
+        solver.solve(700); // Solving TSP with 700 iterations
 
         // Retrieving the best tour and its length
         int[] bestTour = solver.getBestTour();

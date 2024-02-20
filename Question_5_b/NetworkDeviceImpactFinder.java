@@ -34,13 +34,13 @@ public class NetworkDeviceImpactFinder {
             List<Integer> result) {
         // If the current device has only one incoming connection from the target device
         if (inDegree.getOrDefault(device, 0) == 1 && graph.get(target).contains(device)) {
-            // Add the device to the list of impacted devices
+            // Adding the device to the list of impacted devices
             result.add(device);
-            // Recursively add child devices
+            // Recursively adding child devices
             addChildren(graph, device, result);
         }
 
-        // Recursively explore the children of the current device
+        // Recursively exploring the children of the current device
         if (graph.containsKey(device)) {
             for (int child : graph.get(device)) {
                 dfs(graph, inDegree, child, target, result);
@@ -53,7 +53,7 @@ public class NetworkDeviceImpactFinder {
         if (graph.containsKey(device)) {
             for (int child : graph.get(device)) {
                 result.add(child);
-                // Recursively add children of children
+                // Recursively adding children of children
                 addChildren(graph, child, result);
             }
         }
@@ -66,10 +66,10 @@ public class NetworkDeviceImpactFinder {
         // Target device experiencing power outage
         int targetDevice = 4;
 
-        // Find impacted devices
+        // Finding impacted devices
         List<Integer> impactedDevices = findImpactedDevices(networkConnections, targetDevice);
 
-        // Print the list of impacted devices
+        // Printing the list of impacted devices
         System.out.println("Impacted devices due to power outage on device " + targetDevice + ":");
         for (int device : impactedDevices) {
             System.out.println(device);
